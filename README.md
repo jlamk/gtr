@@ -1,5 +1,5 @@
 
-# 🌐 GTR - Simple C Translation Loader
+# 🌐 GTR
 
 **GTR** is a lightweight C library that loads translations from JSON files based on system or user language. 
 
