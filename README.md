@@ -36,7 +36,7 @@ Translation files are regular JSON objects. Example:
   "Hello": "Olá",
   "File Not Found!": "Arquivo Não Encontrado!",
   "Version %d.%d.%d": "Versão %d.%d.%d",
-  "Your Name Is %s": "Seu Nome é %s:"
+  "Your Name Is %s": "Seu Nome é %s"
 }
 ```
 
@@ -62,7 +62,7 @@ int main() {
     printf("\n");
 
     const char *name = "Lucas";
-    printf(gtr("Your Name Is %s"), name);  // Output: Seu Nome é Lucas:
+    printf(gtr("Your Name Is %s"), name);  // Output: Seu Nome é Lucas
     printf("\n");
 
     fprintf(stderr, "%s\n", gtr("File Not Found!"));  // Output: Arquivo Não Encontrado!
