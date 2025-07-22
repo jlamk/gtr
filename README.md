@@ -18,12 +18,12 @@
 ## 🔧 Installation
 
 1. Add `gtr.h` and `gtr.c` to your project.
-2. Link against the Jansson library:
+2. Link against the [jansson](https://digip.org/jansson/) library:
    ```bash
    gcc your_app.c gtr.c -ljansson -o your_app
    ```
 
-3. Create a folder named `ts/` in your project directory and add translation files named like `en_US.json`, `pt_BR.json`, etc.
+3. Create a `ts/` folder in the same directory as your app executable, and add translation files like `en_US.json`, `pt_BR.json`, etc.
 
 ---
 
@@ -117,7 +117,9 @@ project/
 ├── gtr.h
 ├── gtr.c
 ├── main.c
-└── ts/
-    ├── en_US.json
-    └── pt_BR.json
+└── build/
+    ├── App_Executable
+    └── ts/
+        ├── en_US.json
+        └── pt_BR.json
 ```
