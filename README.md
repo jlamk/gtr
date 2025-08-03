@@ -31,7 +31,11 @@
 ```
 
 2.
-Create a ts/ folder in the same directory as your app executable, and add translation files like en_US.json, pt_BR.json, etc.
+Link GTR to your application:
+Add -lgtr -ljansson to your linker flags:
+
+3.
+ Create a ts/ folder in the same directory as your app executable, and add translation files like en_US.json, pt_BR.json, etc.
 
 ---
 
