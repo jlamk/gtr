@@ -15,15 +15,23 @@
 
 ---
 
+## Dependencies
+
+[jansson](https://digip.org/jansson/)
+
 ## 🔧 Installation
 
-1. Add `gtr.h` and `gtr.c` to your project.
-2. Link against the [jansson](https://digip.org/jansson/) library:
-   ```bash
-   gcc your_app.c gtr.c -ljansson -o your_app
-   ```
+1.
 
-3. Create a `ts/` folder in the same directory as your app executable, and add translation files like `en_US.json`, `pt_BR.json`, etc.
+```bash
+  mkdir build
+  cmake ..
+  make
+  sudo make install
+```
+
+2.
+Create a ts/ folder in the same directory as your app executable, and add translation files like en_US.json, pt_BR.json, etc.
 
 ---
 
@@ -31,12 +39,43 @@
 
 Translation files are regular JSON objects. Example:
 
+pt_BR.json
 ```json
 {
-  "Hello": "Olá",
-  "File Not Found!": "Arquivo Não Encontrado!",
-  "Version %d.%d.%d": "Versão %d.%d.%d",
-  "Your Name Is %s": "Seu Nome é %s"
+  "Welcome": "Bem-vindo",
+  "Exit": "Sair",
+  "Error occurred": "Ocorreu um erro",
+  "Please wait": "Por favor, aguarde"
+}
+```
+
+en_US.json
+```json
+{
+  "Welcome": "Welcome",
+  "Exit": "Exit",
+  "Error occurred": "Error occurred",
+  "Please wait": "Please wait"
+}
+```
+
+es_ES.json
+```json
+{
+  "Welcome": "Bienvenido",
+  "Exit": "Salir",
+  "Error occurred": "Ocurrió un error",
+  "Please wait": "Por favor, espera"
+}
+```
+
+fr_FR.json
+```json
+{
+  "Welcome": "Bienvenue",
+  "Exit": "Quitter",
+  "Error occurred": "Une erreur est survenue",
+  "Please wait": "Veuillez patienter"
 }
 ```
 
@@ -47,7 +86,7 @@ Translation files are regular JSON objects. Example:
 ### Initialize:
 
 ```c
-#include "gtr.h"
+#include <gtr.h>
 #include <stdio.h>
 
 int main() {
@@ -103,19 +142,10 @@ void gtr_free();
 
 ---
 
-## 🖥️ System Language Detection
-
-- **Windows**: Uses `GetUserDefaultUILanguage()`
-- **Linux/Unix**: Uses `LANG` environment variable or `setlocale(LC_ALL, "")`
-
----
-
 ## 📁 Folder Structure Example
 
 ```
 project/
-├── gtr.h
-├── gtr.c
 ├── main.c
 └── build/
     ├── App_Executable
